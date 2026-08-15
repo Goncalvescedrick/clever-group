@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clever-blue: #1a1aaa;
+  --color-clever-darkblue: #0d0d9e;
+  --color-clever-orange: #F26522;
+  
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-gray-800, #1f2937);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-clever-orange);
+  color: white;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
